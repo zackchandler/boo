@@ -7,7 +7,8 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    user = User.create name: 'Zack', email: 'zack@example.com'
+    get :show, id: user.id
     assert_response :success
   end
 
