@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @company.name %></h1>
+
+<% @company.units.each do |unit| %>
+<p>
+  <%= unit.name %>
+</p>
+<% end %>
+  
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
